@@ -1,0 +1,18 @@
+<%- include("partials/header") %>
+
+<h2>Home</h2>
+<p>
+  Welcome to your daily journal. Below are your posts. Click Compose in the Header Menu to add a new post.
+</p>
+
+<% posts.forEach(function(post, index) { %>
+<div class="mb-4">
+  <h3><%= post.title %></h3>
+  <p>
+    <%= post.content.length > 100 ? post.content.slice(0, 300) + "..." :
+    post.content %> <% if (post.content.length > 300) { %>
+    <a href="/posts/<%= post._id %>">See More</a>
+    <% } %>
+  </p>
+  <% }); %> <%- include("partials/footer") %>
+</div>
