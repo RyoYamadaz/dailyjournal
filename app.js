@@ -11,7 +11,7 @@ app.use(express.static("public"));
 
 // MongoDB Connection
 mongoose.connect(
-  "mongodb+srv://chrizty90888:1uJNCt5IgwP5q2zt@cluster0.okjxizw.mongodb.net/dailyJournalDB?retryWrites=true&w=majority&appName=Cluster0"
+  "mongodb+srv://chrizty90888:ucKPJVMAptkMXOp8@cluster0.okjxizw.mongodb.net/?retryWrites=true&w=majority"
 ).then(() => {
   console.log("✅ Connected to MongoDB");
 }).catch((err) => {
@@ -88,3 +88,4 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`🚀 Server running on port ${port}`);
 });
+
